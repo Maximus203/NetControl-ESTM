@@ -33,7 +33,7 @@ De plus, vous aurez besoin d'une **clé API UniFi** valide pour accéder aux éq
 1. **Clonez le dépôt :**
 
    ```bash
-   git clone https://github.com/votre-utilisateur/NetControl-ESTM.git
+   git clone https://github.com/Maximus203/NetControl-ESTM.git
    cd NetControl-ESTM
    ```
 
