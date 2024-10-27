@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NetControl-ESTM
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Logo de l'ESTM](public/images/ESTM.webp)
 
-## About Laravel
+**NetControl-ESTM** est une application web conçue pour la gestion des réseaux de l'École Supérieure de Technologie et de Management (ESTM). Elle offre une interface utilisateur alternative à celle d'UniFi, permettant le management d'un parc de dispositifs réseau Ubiquiti (USG Pro 4, points d'accès, etc.) via une interface Laravel complète.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Cette application s'adresse aux administrateurs réseaux souhaitant surveiller et configurer leur réseau avec plus de flexibilité et d'options de personnalisation.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fonctionnalités
 
-## Learning Laravel
+- **Gestion du réseau** : Vue centralisée pour surveiller les équipements et configurer les règles de sécurité, les VLANs, etc.
+- **Rapports en temps réel** : Visualisation des statistiques réseau.
+- **Authentification sécurisée** : Authentification et gestion des utilisateurs avec Laravel Breeze.
+- **Interface moderne** : Utilisation de Tailwind CSS et Flowbite pour une interface intuitive et réactive.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Prérequis
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Pour utiliser ou contribuer à ce projet, assurez-vous de disposer des versions logicielles suivantes :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Laravel** : 11.28.0
+- **PHP** : 8.2.6
+- **Tailwind CSS** : ^3.4.14
+- **Laravel Livewire** : v3.5.12
+- **Laravel Breeze** : ^2.2
+- **Flowbite** : ^2.5.2
 
-## Laravel Sponsors
+De plus, vous aurez besoin d'une **clé API UniFi** valide pour accéder aux équipements réseau Ubiquiti.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Installation
 
-### Premium Partners
+1. **Clonez le dépôt :**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+   ```bash
+   git clone https://github.com/votre-utilisateur/NetControl-ESTM.git
+   cd NetControl-ESTM
+   ```
 
-## Contributing
+2. **Installez les dépendances Composer et NPM :**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
 
-## Code of Conduct
+3. **Configurez l'environnement :**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   Copiez le fichier `.env.example` en `.env`, et définissez les paramètres nécessaires pour la connexion à la base de données PostgreSQL, la clé API UniFi, et les informations d'authentification.
 
-## Security Vulnerabilities
+   ```bash
+   php artisan key:generate
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. **Effectuez les migrations de la base de données :**
 
-## License
+   ```bash
+   php artisan migrate
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. **Lancez le serveur de développement :**
+
+   ```bash
+   php artisan serve
+   ```
+
+L'application est maintenant accessible sur `http://localhost:8000`.
+
+---
+
+## Contributions
+
+Pour contribuer à ce projet, veuillez consulter les fichiers [CONTRIBUTING.md](CONTRIBUTING.md) et [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+---
+
+## Sécurité
+
+Merci de signaler tout problème de sécurité à l'ESTM en suivant le fichier [SECURITY.md](SECURITY.md).
+
+---
+
+## Licence
+
+Ce projet est sous licence MIT. Voir [LICENSE](LICENSE) pour plus de détails.
