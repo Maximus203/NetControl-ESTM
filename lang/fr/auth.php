@@ -39,4 +39,6 @@ return [
     'I accept' => 'J\'accepte',
     'Terms of Service' => 'Termes et conditions d\'utilisation du service',
     'You\'re logged in!' => 'Vous êtes connecté !',
+    'Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.' => 'Mot de passe oublié ? Pas de problème. Indiquez-nous simplement votre adresse e-mail et nous vous enverrons un lien de réinitialisation du mot de passe par e-mail qui vous permettra d’en choisir un nouveau.',
+    'Email Password Reset Link' => 'Envoyer le lien de réinitialisation',
 ];
