@@ -4,7 +4,7 @@ Merci de nous aider à assurer la sécurité de NetControl-ESTM en signalant tou
 
 ## Signalement de failles
 
-Si vous découvrez une vulnérabilité de sécurité dans ce projet, merci de la signaler directement à l'École Supérieure de Technologie et de Management (ESTM) à l'adresse suivante : **securite@estm.example.com**. 
+Si vous découvrez une vulnérabilité de sécurité dans ce projet, merci de la signaler directement à l'École Supérieure de Technologie et de Management (ESTM) à l'adresse suivante : [dioufcherif99@estm.edu.sn](mailto:dioufcherif99@estm.edu.sn). 
 
 Veuillez fournir une description complète du problème, y compris les étapes pour le reproduire. Nous ferons de notre mieux pour corriger les problèmes de sécurité dans les plus brefs délais.
 
