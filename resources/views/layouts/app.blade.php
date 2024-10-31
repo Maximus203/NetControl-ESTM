@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ str_replace('-', ' ', config('app.name', 'Laravel')) }}</title>
+    @if (isset($title))
+        <title>{{ $title }}</title>
+    @else
+        <title>{{ str_replace('-', ' ', config('app.name')) }}</title>
+    @endif
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
