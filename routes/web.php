@@ -13,7 +13,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Volt::route('hosts-list', 'hosts.hosts-list')
+Route::view('hosts-list', 'pages.hosts.hosts')
     ->name('hosts-list');
 
 require __DIR__ . '/auth.php';
